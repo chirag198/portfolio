@@ -8,9 +8,6 @@ title: 'Chirag Gulati — Portfolio'
 # Website URL
 baseURL: 'https://example.com/'
 
-# Theme
-theme: "PaperMod"
-
 ############################
 ## LANGUAGE
 ############################
@@ -23,6 +20,9 @@ removePathAccents: true
 ############################
 ## ADVANCED
 ############################
+imports:
+  - path: github.com/adityatelange/hugo-PaperMod
+
 
 build:
   writeStats: true
