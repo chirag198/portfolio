@@ -90,12 +90,6 @@ data = pd.read_csv("data.csv")
 data.head()
 ```
 
-## Inline Images
-
-```go
-{{</* icon name="python" */>}} Python
-```
-
 renders as
 
 {{< icon name="python" >}} Python
