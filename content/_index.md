@@ -1,137 +1,162 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ""
+title: "Chirag Aggarwal"
 date: 2022-10-24
 type: landing
-design:
-  # Default section spacing
-  spacing: "6rem"
+
 sections:
-  - block: resume-biography-3
+  # Hero Section with Introduction
+  - block: hero
+    demo: true
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
+      title: "Welcome to My Portfolio"
+      image:
+        filename: hero-academic.png
+      cta:
+        url: "./resume.md"
+        label: "View My Resume"
+        icon_pack: fas
+        icon: download
+      cta_alt:
+        url: "./projects.md"
+        label: "Explore Projects"
+      cta_note:
+        label: "Available for collaboration and opportunities"
+      text: |
+        **Software Engineer | Full-Stack Developer | Problem Solver**
+        
+        Welcome! I'm Chirag Aggarwal, a passionate software engineer with expertise in full-stack development, system design, and modern web technologies. I build scalable applications and love solving complex technical challenges.
+        
+        Currently pursuing my Master's in Computer Science while working on innovative projects that blend cutting-edge technology with practical solutions.
     design:
-      css_class: dark
       background:
-        color: black
-        image:
-          # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
+        gradient_end: '#1976d2'
+        gradient_start: '#004ba0'
+        text_color_light: true
+
+  # Navigation Quick Links
+  - block: features
+    content:
+      title: "Quick Navigation"
+      subtitle: "Explore different sections of my portfolio"
+      items:
+        - name: "💼 Experience"
+          description: "Professional journey and work history"
+          icon: briefcase
+          icon_pack: fas
+          url: "./experience.md"
+        - name: "🎓 Education"
+          description: "Academic background and achievements"
+          icon: graduation-cap
+          icon_pack: fas
+          url: "./education.md"
+        - name: "🚀 Projects"
+          description: "Technical projects and innovations"
+          icon: rocket
+          icon_pack: fas
+          url: "./projects.md"
+        - name: "📄 Resume"
+          description: "Complete professional summary"
+          icon: file-alt
+          icon_pack: fas
+          url: "./resume.md"
+
+  # Personal Statement Section
   - block: markdown
     content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+      title: "About Me"
+      subtitle: "My Journey & Passion"
+      text: |
+        ## Who I Am
         
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        I'm a dedicated software engineer with a strong foundation in computer science and a passion for creating impactful technology solutions. My journey in software development has been driven by curiosity, continuous learning, and the desire to build applications that make a difference.
         
-        Please reach out to collaborate 😃
+        ## What I Do
+        
+        - **Full-Stack Development**: Building end-to-end web applications using modern frameworks and technologies
+        - **System Design**: Architecting scalable and efficient software systems
+        - **Problem Solving**: Tackling complex technical challenges with analytical thinking
+        - **Continuous Learning**: Staying updated with the latest technologies and best practices
+        
+        ## My Approach
+        
+        I believe in writing clean, maintainable code and following best practices in software development. I'm passionate about user experience, performance optimization, and building solutions that are both technically sound and user-friendly.
+        
+        ## Let's Connect
+        
+        I'm always interested in discussing new opportunities, collaborating on interesting projects, or simply connecting with fellow developers. Feel free to reach out!
     design:
       columns: '1'
-  - block: collection
-    id: papers
+      background:
+        color: 'navy'
+        text_color_light: true
+
+  # Featured Projects Preview
+  - block: portfolio
+    id: projects
     content:
-      title: Featured Publications
+      title: "Featured Projects"
+      subtitle: "Some of my recent work"
       filters:
         folders:
-          - publication
-        featured_only: true
+          - project
+      default_button_index: 0
+      buttons:
+        - name: All
+          tag: '*'
+        - name: Web Development
+          tag: Web
+        - name: Mobile
+          tag: Mobile
+        - name: AI/ML
+          tag: AI
     design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ""
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      view: article-grid
-      columns: 1
-  - block: collection
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: post
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        author: ""
-        category: ""
-        tag: ""
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ""
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: date-title-summary
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
+      columns: '2'
+      view: showcase
+      flip_alt_rows: false
+
+  # Skills & Technologies
   - block: markdown
     content:
-      title: '💼 My Complete Resume'
-      subtitle: ''
-      text: |-
-        Want to learn more about my background, experience, and skills? 
+      title: "🛠️ Technical Skills"
+      text: |
+        ### Programming Languages
+        **Python** • **JavaScript/TypeScript** • **Java** • **C++** • **Go** • **SQL**
         
-        **[See my full resume here →](../resume.md)**
+        ### Frontend Technologies
+        **React.js** • **Next.js** • **Vue.js** • **HTML5/CSS3** • **Tailwind CSS** • **Bootstrap**
         
-        Get detailed information about my professional journey, technical expertise, projects, and accomplishments.
+        ### Backend Technologies
+        **Node.js** • **Express.js** • **Django** • **Flask** • **Spring Boot** • **RESTful APIs**
+        
+        ### Databases & Cloud
+        **MongoDB** • **PostgreSQL** • **MySQL** • **Redis** • **AWS** • **Google Cloud** • **Docker**
+        
+        ### Tools & Platforms
+        **Git/GitHub** • **VS Code** • **Linux** • **CI/CD** • **Agile/Scrum** • **Testing Frameworks**
     design:
       columns: '1'
-      css_class: 'text-center'
       background:
         color: '#f8f9fa'
-  - block: cta-card
-    demo: true # Only display this section in the Hugo Blox Builder demo site
+
+  # Contact Call-to-Action
+  - block: cta
+    demo: true
     content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
-        <a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a>
-        
-        Easily build anything with blocks - no-code required!
-        
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+      title: "Ready to Collaborate?"
+      text: "I'm always open to discussing new opportunities, interesting projects, or potential collaborations. Let's build something amazing together!"
+      cta:
+        url: "mailto:your-email@example.com"
+        label: "Get In Touch"
+        icon_pack: fas
+        icon: envelope
+      cta_alt:
+        url: "./resume.md"
+        label: "Download Resume"
+        icon_pack: fas
+        icon: download
     design:
-      card:
-        # Card background color (CSS class)
-        css_class: "bg-primary-700"
-        css_style: ""
+      background:
+        gradient_end: '#1976d2'
+        gradient_start: '#004ba0'
+        text_color_light: true
 ---
