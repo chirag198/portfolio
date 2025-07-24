@@ -29,12 +29,6 @@ Teach your course by sharing videos with your students. Choose from one of the f
 
 {{< youtube D2vj0WcvH5c >}}
 
-**Bilibili**:
-
-    {{</* bilibili BV1WV4y1r7DF */>}}
-
-{{< bilibili BV1WV4y1r7DF >}}
-
 **Video file**
 
 Videos may be added to a page by either placing them in your `assets/media/` media library or in your [page's folder](https://gohugo.io/content-management/page-bundles/), and then embedding them with the _video_ shortcode:
